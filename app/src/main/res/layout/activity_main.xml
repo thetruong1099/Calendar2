@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_month_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Feb 2021"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_settings_black_18" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_month_year">
+
+        <include
+            android:id="@+id/day_start_sun"
+            layout="@layout/layout_day_start_sun"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/day_start_mon"
+            layout="@layout/layout_day_start_mon"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/day_start_tue"
+            layout="@layout/layout_day_start_tue"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/day_start_wed"
+            layout="@layout/layout_day_start_wed"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/day_start_thur"
+            layout="@layout/layout_day_start_thur"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/day_start_fri"
+            layout="@layout/layout_day_start_fri"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/day_start_sat"
+            layout="@layout/layout_day_start_sat"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/calendar_view_papger"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></androidx.viewpager2.widget.ViewPager2>
+
+    <TextView
+        android:id="@+id/tv_current_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/back_ground_item_day_in_month"
+        android:paddingStart="23dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="23dp"
+        android:paddingBottom="20dp"
+        android:text="27"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
