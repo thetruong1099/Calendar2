@@ -146,7 +146,6 @@ class CalendarFragment(
         return -1
     }
 
-
     private fun setMonthYear(year: Int, month: Int) {
         var tvMonthYear = activity!!.findViewById<TextView>(R.id.tv_month_year)
         tvMonthYear.text = "$year ${getNameMonth(month)}"

@@ -145,7 +145,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        tv_current_day.setOnClickListener { calendar_view_papger.currentItem = size / 2 }
+//        tv_current_day.setOnClickListener { calendar_view_papger.currentItem = size / 2 }
     }
 
     private fun setDayStartLayout(string: String) {
