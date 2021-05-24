@@ -81,7 +81,11 @@ class CalendarFragment(
         //last day of Previous Month
 
         val calendarPrevious = Calendar.getInstance()
-        calendarPrevious.add(Calendar.MONTH, -1)
+        if (currentMonth -1 == 1 || currentMonth -1 == 3 || currentMonth -1 == 5
+            || currentMonth  -1== 7 || currentMonth -1 == 8
+            || currentMonth -1 == 10 || currentMonth -1 == 12) calendarPrevious.add(Calendar.MONTH, -2)
+        else calendarPrevious.add(Calendar.MONTH, -1)
+
         val max = calendarPrevious.getActualMaximum(Calendar.DAY_OF_MONTH)
         calendarPrevious.set(Calendar.DAY_OF_MONTH, max)
         val dayOfPreviousMonth = calendarPrevious.get(Calendar.DATE)
@@ -116,7 +120,7 @@ class CalendarFragment(
             calendarItems.add(map)
         }
 
-        //get day of current month
+        //get day of next month
         var day = 1
         if (week < 7) {
             for (i in week + 1..7) {
@@ -150,7 +154,6 @@ class CalendarFragment(
         var tvMonthYear = activity!!.findViewById<TextView>(R.id.tv_month_year)
         tvMonthYear.text = "$year ${getNameMonth(month)}"
     }
-
     private fun getNameMonth(i: Int): String {
         val list = listOf<String>(
             "January",

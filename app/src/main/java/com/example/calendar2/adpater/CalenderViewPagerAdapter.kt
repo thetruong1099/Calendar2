@@ -18,23 +18,12 @@ class CalenderViewPagerAdapter(
 
     override fun createFragment(position: Int): Fragment = fragmentList[position]
 
-    fun addtoRightList(fragment: Fragment, index: Int) {
+    fun setFragmentAtPosition(fragment: Fragment, index: Int) {
         var result = fragmentList.find {
             it == fragment
         }
         if (result == null) {
             fragmentList.set(index, fragment)
-        }
-        notifyItemChanged(index)
-    }
-
-    fun addToLeftList(fragment: Fragment, index: Int) {
-        var result = fragmentList.find {
-            it == fragment
-        }
-        if (result == null) {
-            fragmentList.set(index, fragment)
-
         }
         notifyItemChanged(index)
     }

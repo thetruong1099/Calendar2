@@ -38,45 +38,80 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_month_year">
 
-        <include
-            android:id="@+id/day_start_sun"
-            layout="@layout/layout_day_start_sun"
-            android:visibility="visible" />
+        <TextView
+            android:id="@+id/tv_day_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sun"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
 
-        <include
-            android:id="@+id/day_start_mon"
-            layout="@layout/layout_day_start_mon"
-            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_day_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mon"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
 
-        <include
-            android:id="@+id/day_start_tue"
-            layout="@layout/layout_day_start_tue"
-            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_day_third"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tue"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
 
-        <include
-            android:id="@+id/day_start_wed"
-            layout="@layout/layout_day_start_wed"
-            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_day_fourth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/wed"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
 
-        <include
-            android:id="@+id/day_start_thur"
-            layout="@layout/layout_day_start_thur"
-            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_day_fifth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/thur"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
 
-        <include
-            android:id="@+id/day_start_fri"
-            layout="@layout/layout_day_start_fri"
-            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_day_sixth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fri"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
 
-        <include
-            android:id="@+id/day_start_sat"
-            layout="@layout/layout_day_start_sat"
-            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_day_seventh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sat"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <androidx.viewpager2.widget.ViewPager2
